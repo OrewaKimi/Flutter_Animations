@@ -64,6 +64,18 @@ Dengan **Lottie**:
 
 ---
 
+## 🔧 Depedency
+Tambahkan di `pubspec.yaml`: dependencies: `lottie: ^1.2.1 dan google_fonts: ^6.1.0` atau versi terbaru
+---  
+  
+
+## 🚀 Jalankan Proyek
+
+```bash
+flutter pub get
+flutter run
+```
+
 ## 💾 Cuplikan Kode  
 
 ### Animasi Lottie
