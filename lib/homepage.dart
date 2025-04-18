@@ -16,7 +16,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(seconds: 5),
+      duration: Duration(seconds: 100),
       vsync: this,
     );
   }
@@ -40,7 +40,12 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
           children: [
             Text(
               "Please Wait",
-              style: TextStyle(fontSize: 24, color: Colors.white),
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontFamily: 'Open Sans',
+                fontWeight: FontWeight.w600,
+              ),
             ),
             SizedBox(height: 20),
             Center(
@@ -63,7 +68,12 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
             SizedBox(height: 20),
             Text(
               "We are currently sending your package",
-              style: TextStyle(fontSize: 18, color: Colors.white),
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+                fontFamily: 'Lato',
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ],
         ),
