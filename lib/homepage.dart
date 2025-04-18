@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -14,66 +15,54 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-
     _controller = AnimationController(
-      duration: Duration(seconds: 100),
+      duration: const Duration(seconds: 2),
       vsync: this,
-    );
+    )..repeat();
   }
 
   @override
   void dispose() {
-    super.dispose();
-
     _controller.dispose();
+    super.dispose();
   }
-
-  bool bookmarked = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.deepPurple[200],
+      backgroundColor: Colors.deepPurple[300],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Please Wait",
-              style: TextStyle(
-                fontSize: 24,
+              "🚀 Sending it your way!",
+              style: GoogleFonts.poppins(
+                fontSize: 36,
+                fontWeight: FontWeight.w800,
                 color: Colors.white,
-                fontFamily: 'Open Sans',
-                fontWeight: FontWeight.w600,
+                letterSpacing: 1.5,
               ),
+              textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 30),
             Center(
-              child: GestureDetector(
-                onTap: () {
-                  if (bookmarked == false) {
-                    _controller.forward();
-                    bookmarked = true;
-                  } else {
-                    bookmarked = false;
-                    _controller.reverse();
-                  }
-                },
-                child: Lottie.network(
-                  'https://lottie.host/9790d318-d666-4003-a68f-8a9739e1ccb9/KYr2X45e54.json',
-                  controller: _controller,
-                ),
+              child: Lottie.network(
+                'https://lottie.host/9790d318-d666-4003-a68f-8a9739e1ccb9/KYr2X45e54.json',
+                controller: _controller,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 30),
             Text(
-              "We are currently sending your package",
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-                fontFamily: 'Lato',
-                fontWeight: FontWeight.w400,
+              "Hold tight, your package is on the move ✨",
+              style: GoogleFonts.dmSans(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: Colors.white.withOpacity(0.85),
+                height: 1.6,
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
