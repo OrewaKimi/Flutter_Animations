@@ -1,4 +1,4 @@
-# 📦 Animations Menggunakan Lottie di Flutter
+# 📱 Animations Menggunakan Lottie di Flutter
 
 ## 📖 Pengertian  
 **Lottie** adalah library animasi open-source yang dapat menampilkan animasi berbasis **JSON** dari **After Effects** melalui plugin **Bodymovin**.  
