@@ -9,19 +9,17 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
-  //controller
-  late final AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 5),
       vsync: this,
-      );
+    );
   }
-
   @override
   void dispose() {
     super.dispose();
@@ -46,7 +44,7 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
             }
           },
           child: Lottie.network(
-            'https://lottie.host/ba6d0140-2298-406f-aa59-736835d99bfa/M3oe6B5aWP.json',
+            'https://lottie.host/9790d318-d666-4003-a68f-8a9739e1ccb9/KYr2X45e54.json',
             controller: _controller,
           ),
         ),
